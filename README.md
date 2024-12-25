@@ -94,14 +94,25 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 - now you see we got the data from pass column.
 
 ***3. Insecurity authentication***
+#### i.unencrypted username and password
+- Step 1: Visit testphp.vulnweb.com and go to the signup page. Enter your username and password, but do not click the login button yet. Open Wireshark and navigate to the currently connected network module. Now, click the login button on the web page.
 
 ![image](https://github.com/user-attachments/assets/7bdef671-45d3-4dca-8b79-c9ac864504e7)
 
+- Step 2: Wireshark will start capturing packets.
+  
 ![Screenshot 2024-12-25 113311](https://github.com/user-attachments/assets/0a3c8779-0056-4d03-8c24-9b690a0da78f)
 
+- Step 3: In Wireshark, select the filter option and search for "http". You will see HTTP POST packets. Click on  Post packets.
+  
 ![image](https://github.com/user-attachments/assets/19c5a1e3-725e-4f0b-86a6-4538db48c1fd)
 
+- Step 4: Select the "HTML Form URL Encoded" option from the packet details pane. You'll notice that the username (uname) and password (pass) are sent in plaintext, without encryption.
+  
 ![image](https://github.com/user-attachments/assets/f5795b99-e62d-44a3-9741-37db46ce4a82)
+
+- Insecure Authentication: Transmitting credentials without encryption.
+- Vulnerability: Lack of encryption exposes sensitive information.
 
 
   
