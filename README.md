@@ -91,7 +91,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 ![image](https://github.com/user-attachments/assets/be536d09-1175-4123-bec8-a4b488436316)
 
 - now you see we got the data from pass column.
-
+- This is a SQL based vulnerability which we found in testphp.vulnweb.com.
 
 ***3. Insecurity authentication***
 #### i.unencrypted username and password
@@ -113,6 +113,10 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 
 - Insecure Authentication: Transmitting credentials without encryption.
 - Vulnerability: Lack of encryption exposes sensitive information.
+
+## Conclusion
+- Web Application Penetration Testing is critical for detecting and addressing security flaws in web applications.
+- By performing thorough testing and providing remediation recommendations, we can enhance the security posture of web applications and protect them from potential attacks.
 
 
   
