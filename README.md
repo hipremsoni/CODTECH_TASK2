@@ -95,7 +95,13 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 
 ***3. Insecurity authentication***
 
+![image](https://github.com/user-attachments/assets/7bdef671-45d3-4dca-8b79-c9ac864504e7)
 
+![Screenshot 2024-12-25 113311](https://github.com/user-attachments/assets/0a3c8779-0056-4d03-8c24-9b690a0da78f)
+
+![image](https://github.com/user-attachments/assets/19c5a1e3-725e-4f0b-86a6-4538db48c1fd)
+
+![image](https://github.com/user-attachments/assets/f5795b99-e62d-44a3-9741-37db46ce4a82)
 
 
   
