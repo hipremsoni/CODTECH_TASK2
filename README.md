@@ -3,10 +3,10 @@
 ## Personal information 
 - Name : Premkumar Soni
 - Company : CODTECH IT SOLUTIONS PVT.LTD
-- ID : CTO8DBS
+- ID : CT08DBS
 - Domain : Cyber Security & Ethical Hacking
 - Duration: 20th Dec 2024 To 20th Jan 2025
-- Mentor : Muzammil Ahmed
+- Mentor : Neela Santhosh kumar
 
 ## Overview 
 - Web Application Penetration Testing involves identifying and exploiting security vulnerabilities in web applications to ensure they are secure against potential attacks. This process focuses on vulnerabilities like SQL injection, cross-site scripting (XSS), and insecure authentication mechanisms.
