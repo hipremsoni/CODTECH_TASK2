@@ -40,7 +40,7 @@
 - XSS vulnerabilities occur when an attacker is able to inject malicious scripts into web pages that other users view.
 - These scripts can steal session cookies, deface websites, or redirect users to malicious sites.
 
-- step 1 : Now first open the site and write xss payload on serachbar.
+- step 1 :  first open the site and write xss payload on serachbar. payload is given below.
 ```payload
 <script>alert("XSS vulnerability found")</script>
 ```
@@ -83,8 +83,8 @@
 http://testphp.vulnweb.com/artists.php?artist=1
 ```
 - Step 3 : open the kali linux terminal.
-- Now write the given command for perform SQL injection.
-- here -u refers for URL & --dbs for database.
+-  write the given command for perform SQL injection.
+- here -u refers for URL & --dbs for databases.
 
 ```URL
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs
@@ -92,10 +92,10 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs
 ![image](https://github.com/user-attachments/assets/ac991ea7-e099-4417-9ea8-cc054b60b2bb)
 ![image](https://github.com/user-attachments/assets/1cc8b432-8ff6-4992-909b-89e7eaeec607)
 
-- Now you see that we got a two databases. first is acuart and second is information_schema.
-- Now we go to the inner in acuart database.
+-  you see that we got a two databases. first is acuart and second is information_schema.
+-  we go to the inner in acuart database.
 
-- Step 4 : Now follow this commnd for find columns in acuart database.
+- Step 4 : follow this commnd for find columns in acuart database.
 ```COMMAND
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart --columns
 ```
@@ -103,7 +103,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart --columns
 ![image](https://github.com/user-attachments/assets/b27503b2-9ecb-436e-a738-c7f27ecce8b1)
 ![image](https://github.com/user-attachments/assets/642a7e93-afa0-42cf-afec-dca12106f875)
 
-- Now you see we got columns of databases.
+-  you see we got columns of database.
 
 - step 5 : Retrieve data from the pass column using the following command.
 
