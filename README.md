@@ -37,6 +37,8 @@
 - **Port** : 80 [http] open
 ### Performed Testing on testphp.vulnweb.com
 ***1. XSS Vulnerability***
+- XSS vulnerabilities occur when an attacker is able to inject malicious scripts into web pages that other users view.
+- These scripts can steal session cookies, deface websites, or redirect users to malicious sites.
 
 - step 1 : Now first open the site and write xss payload on serachbar.
 ```payload
@@ -48,9 +50,30 @@
 
 ![image](https://github.com/user-attachments/assets/93508085-ec0d-480b-82e8-611469ed5891)
 
+- More Payload :
+<1>
+  ```1.Payload
+  <image/src/onerror=prompt(8)>
+  ```
+
+  ![image](https://github.com/user-attachments/assets/d29302ba-1dfe-45bc-a969-948fe7d0166f)
+
+  ![image](https://github.com/user-attachments/assets/60d60c8c-7c71-4dc0-8887-3abf4c5e21fe)
+<2>
+ ```2.payload
+<object src=1 href=1 onerror="javascript:alert(1)"></object>
+```
+![image](https://github.com/user-attachments/assets/9f525425-fc1d-43f1-8551-f593d82b6ce7)
+
+![image](https://github.com/user-attachments/assets/ee5eeb4d-4711-4a0b-9c55-0c786c9e5ab4)
+
+
 ***2. SQL injection Vulnerability***
 
-- Step 1 : In first step first we found the phpid of ***testphp.vulnweb.com*** site.
+- SQL injection vulnerabilities allow attackers to manipulate SQL queries by injecting malicious input.
+- This can lead to unauthorized access to the database, data leakage, or even data manipulation.
+
+- Step 1 :  we identify the phpid of ***testphp.vulnweb.com*** site.
 
   ![image](https://github.com/user-attachments/assets/61e8736f-0775-411b-b199-ee06e6a0dc08)
 
@@ -94,6 +117,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 - This is a SQL based vulnerability which we found in testphp.vulnweb.com.
 
 ***3. Insecurity authentication***
+- Insecure authentication vulnerabilities arise when authentication mechanisms do not adequately protect user credentials.
 #### i.unencrypted username and password
 - Step 1: Visit testphp.vulnweb.com and go to the signup page. Enter your username and password, but do not click the login button yet. Open Wireshark and navigate to the currently connected network module. Now, click the login button on the web page.
 
@@ -115,8 +139,7 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -C pass  --d
 - Vulnerability: Lack of encryption exposes sensitive information.
 
 ## Conclusion
-- Web Application Penetration Testing is critical for detecting and addressing security flaws in web applications.
-- By performing thorough testing and providing remediation recommendations, we can enhance the security posture of web applications and protect them from potential attacks.
+- Web Application Penetration Testing is essential for identifying and fixing security vulnerabilities in web applications. By conducting thorough tests and providing remediation recommendations, we can significantly improve the security of web applications and protect them from potential attacks.
 
 
   
